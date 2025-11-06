@@ -9,7 +9,7 @@ on:
     branches: [ main, master ]
 
 env:
-  CSV_URL: "preprocessing/Data_Liver_Cleaned.csv"
+  CSV_URL: "Eksperimen_SML_Mayang-Gumelar/preprocessing/Data_Liver_Cleaned.csv"
   TARGET_VAR: "Target"
 
 jobs:
@@ -25,9 +25,9 @@ jobs:
       with:
         python-version: '3.12.7'
 
-    - name: Check Env
+    - name: Check Env (Debug)
       run: |
-        echo %CSV_URL
+        echo "CSV Path: ${{ env.CSV_PATH }}"
 
     - name: 3. Install Dependencies
       run: |
@@ -36,7 +36,7 @@ jobs:
 
     - name: 4. Run Preprocessing Script
       run: |
-        python /preprocessing/automate_Mayang-Gumelar.py
+        python Eksperimen_SML_Mayang-Gumelar/preprocessing/automate_Mayang-Gumelar.py
 
     - name: 5. Verify Output Files
       run: |
