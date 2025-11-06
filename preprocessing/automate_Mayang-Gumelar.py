@@ -52,7 +52,7 @@ def preproces_auto(data, target_column, scaler_save_path, output_prefix):
     return X_train, X_test, y_train, y_test
 
 # Penggunaan
-DATA_PATH = 'Eksperimen_SML_Mayang-Gumelar/preprocessing/Data_Liver_Cleaned.csv'
+DATA_PATH = 'Data_Liver_Cleaned.csv'
 
 df = pd.read_csv(DATA_PATH)
 
