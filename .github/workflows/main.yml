@@ -9,7 +9,7 @@ on:
     branches: [ main, master ]
 
 env:
-  CSV_URL: "Eksperimen_SML_Mayang-Gumelar/preprocessing/Data_Liver_Cleaned.csv"
+  CSV_URL: "preprocessing/Data_Liver_Cleaned.csv"
   TARGET_VAR: "Target"
 
 jobs:
@@ -36,7 +36,7 @@ jobs:
 
     - name: 4. Run Preprocessing Script
       run: |
-        python Eksperimen_SML_Mayang-Gumelar/preprocessing/automate_Mayang-Gumelar.py
+        python preprocessing/automate_Mayang-Gumelar.py
 
     - name: 5. Verify Output Files
       run: |
