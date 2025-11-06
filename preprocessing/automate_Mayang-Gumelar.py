@@ -52,9 +52,10 @@ def preproces_auto(data, target_column, scaler_save_path, output_prefix):
     return X_train, X_test, y_train, y_test
 
 # Penggunaan
-DATA_PATH = 'Data_Liver_Cleaned.csv'
+script_dir = os.path.dirname(os.path.abspath(__file__))
+data_path = os.path.join(script_dir, "Data_Liver_Cleaned.csv")
 
-df = pd.read_csv(DATA_PATH)
+df = pd.read_csv(data_path)
 
 X_train, X_test, y_train, y_test = preproces_auto(
     data=df,
